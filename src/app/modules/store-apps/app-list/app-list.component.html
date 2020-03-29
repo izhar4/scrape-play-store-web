@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngIf="(appList$| async) as appList">
+            <div class="card cardPad" *ngFor="let app of appList">
+                <img class="card-img-top" [src]="app?.icon" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{app.name}}</h5>
+                    <p class="card-text">
+                        {{app.developerName}}
+                    </p>
+                    <a (click)="viewDetail(app.playStoreId)" class="btn btn-primary">View Detail</a>
+                </div>
+            </div>
+        </ng-container>
+
+        <!-- <div class="card cardPad">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card cardPad">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card cardPad">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>{{appDetail?.name}}</h1>
+    <h3>{{appDetail?.developerName}}</h3>
+    <div>
+        <img [src]="appDetail?.icon"/>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div>
+            <img style="width: 25%;" *ngFor="let image of appDetail?.images; let i = index" [src]="image" alt="First slide">
+        </div>
+    </div>
+</div>
