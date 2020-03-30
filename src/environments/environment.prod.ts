@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseApiURL: 'localhost:8081/'
+  baseApiURL: 'https://boiling-taiga-40384.herokuapp.com/'
 };

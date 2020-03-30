@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
   reScrapeData() {
     this.loader = true;
-    this.request.get<any>('/').subscribe(res => {
+    this.request.get<any>('/update').subscribe(res => {
       this.loader = false;
       this.request.setAppList(res.data);
       alert('Data re-scraped successfully');
