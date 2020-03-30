@@ -14,7 +14,6 @@ export class AppDetailComponent implements OnInit {
   ngOnInit(): void {
     this.request.getAppList().pipe().subscribe(res => {
       this.appDetail = res.find(data => data.playStoreId === this.route.snapshot.params.appId);
-      console.log(this.appDetail)
     });
   }
 

@@ -17,8 +17,15 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.request.get<any>('appList').pipe(map(res => res.data)).subscribe(res => this.request.setAppList(res));
   }
+
   reScrapeData() {
     this.loader = true;
-    this.request.get('/').subscribe(res => this.loader = false);
+    this.request.get<any>('/').subscribe(res => {
+      this.loader = false;
+      this.request.setAppList(res.data);
+      alert('Data re-scraped successfully');
+    }, error => {
+      alert('something went wrong please try again');
+    });
   }
 }
